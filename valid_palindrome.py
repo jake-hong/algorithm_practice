@@ -1,4 +1,5 @@
 import collections
+import re
 # 유효한 팰린드롬, 데크 사용을 통해 최적화
 
 
@@ -19,3 +20,16 @@ def isPalindrome(string):
 
 print(isPalindrome("A man, a plan, a canal: Panama"))
 print(isPalindrome("race a car"))
+
+
+# 슬라이싱을 사용한 palindrome
+
+def isPalindrome_slicing(s):
+    s = s.lower()
+    s = re.sub('[^a-z0-9]', '', s)
+
+    return s == s[::-1]
+
+
+print(isPalindrome_slicing("A man, a plan, a canal: Panama"))
+print(isPalindrome_slicing("race a car"))
