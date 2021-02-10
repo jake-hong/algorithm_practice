@@ -1,4 +1,6 @@
 #  소수 구하기.
+import sys
+
 
 def is_prime(a):
     for i in range(2, a, 1):
@@ -6,6 +8,8 @@ def is_prime(a):
             return False
     return True
 
+
+a = int(sys.stdin.readline())
 
 print(is_prime(7))
 print(is_prime(11))
