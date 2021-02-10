@@ -11,7 +11,4 @@ def is_prime(a):
 
 a = int(sys.stdin.readline())
 
-print(is_prime(7))
-print(is_prime(11))
-print(is_prime(8))
-print(is_prime(9))
+print(is_prime(a))
