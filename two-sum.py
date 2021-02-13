@@ -17,7 +17,7 @@ print(twoSum([2, 7, 11, 15], 18))
 # 풀이 2.in 을 이용한 탐색
 
 
-def twoSumIn(nums, target):
+def twoSum2(nums, target):
 
     for i, n in enumerate(nums):
         complement = target - n
