@@ -27,3 +27,24 @@ def twoSum2(nums, target):
 
 
 print(twoSum([2, 7, 11, 15], 18))
+
+
+# 풀이 3. 첫번째 수를 뺀 결과 키 조회 
+
+def twoSum3(nums, target):
+    nums_map ={}
+
+    for i, num in enumerate(nums):
+        nums_map[num] = i 
+
+    for i ,num in enumerate(nums):
+        if target - num in nums_map and i!=nums_map[target-num]:
+            return nums.index(num), nums_map[target - num]
+
+def twoSum4(nums,target):
+    nums_map = {}
+    
+    for i, num in enumerate(nums):
+        if target - num in nums_map:
+            return [nums_map[target-num], i]
+        nums_map[num] = i
